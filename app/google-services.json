@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "374826520785",
+    "firebase_url": "https://chatnew-f6a31.firebaseio.com",
+    "project_id": "chatnew-f6a31",
+    "storage_bucket": "chatnew-f6a31.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374826520785:android:ca50a2ba6b91d246",
+        "android_client_info": {
+          "package_name": "vidur.codeclan.chatnew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "374826520785-v5ilv7k3ljj4pj6oak04jpffpq3p36vq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vidur.codeclan.chatnew",
+            "certificate_hash": "44d1ee4d98d1c8bdbb5e64cbb2707d4354a65a6c"
+          }
+        },
+        {
+          "client_id": "374826520785-0d7tcsriqraf863v627f91m1am6qb3p0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu2lLPYZNSYEgWRzrrgrHpH4mXybahR7o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374826520785-0d7tcsriqraf863v627f91m1am6qb3p0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
