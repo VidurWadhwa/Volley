@@ -26,10 +26,14 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
     TextView  txtResponse;
 
     RequestQueue requestQueue;
+
+    String put;
+
 
     public String urlJsonArry = "https://androidtutorialpoint.com/api/MobileJSONArray.json";
     private String jsonResponse;
@@ -49,9 +56,13 @@ public class MainActivity extends AppCompatActivity {
 
         bt_get = (Button) findViewById(R.id.bt_Json);
 
+        put = "";
+
         txtResponse = (TextView) findViewById(R.id.tv_JSON);
 
         requestQueue = Volley.newRequestQueue(this);
+
+        final List<Mobile> myList = new ArrayList<Mobile>();
 
         bt_get.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,13 +75,21 @@ public class MainActivity extends AppCompatActivity {
                     if(response != null) {
                         try {
                             for(int i = 0 ; i < response.length() ; i++) {
+                                Gson gson = new Gson();
                                 JSONObject obj = response.getJSONObject(i);
-                                Log.i("TAG", obj.toString());
+                                //Log.i("TAG", obj.toString());
+                                Mobile mobile = gson.fromJson(obj.toString(), Mobile.class);
+                                myList.add(mobile);
+//                                put += myList.get(i).toString();
+
+
                             }
                         }catch (Exception e) {
                             e.printStackTrace();
                         }
                     }
+
+//                    txtResponse.setText(put);
 
                 }
             }, new Response.ErrorListener() {
