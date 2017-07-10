@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                         error.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });
+                requestQueue.add(jsonArrayRequest);
 
             }
         });
