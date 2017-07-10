@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                                 //Log.i("TAG", obj.toString());
                                 Mobile mobile = gson.fromJson(obj.toString(), Mobile.class);
                                 myList.add(mobile);
-//                                put += myList.get(i).toString();
+                                put += myList.get(i).toString();
 
 
                             }
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
 
-//                    txtResponse.setText(put);
+                    txtResponse.setText(put);
 
                 }
             }, new Response.ErrorListener() {

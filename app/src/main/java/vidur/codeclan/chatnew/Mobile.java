@@ -105,4 +105,7 @@ public class Mobile {
     public void setUrl(String url) {
         this.url = url;
     }
+    public String toString(){//overriding the toString() method
+        return name+" "+companyName+" "+backCamera+" " + frontCamera + " " + battery + " " + url + " " + screenSize;
+    }
 }
